@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css/account/account.css">
+    <link rel="stylesheet" href="css/account/dark_mode.css">
+
+    <script src="js/account/account.js" defer></script>
+    <script src="js/account/reveal.js" defer></script>
+    <script src="js/account/old_projects.js" defer></script>
+    
+
+    <script src="js//all/mode.js" defer></script>
+    <script src="js//all/menu.js" defer></script>
+</head>
+<body>
+    <div class="container">
+         <div class=" flex space-between navigation">
+            <div class="logo">
+                <strong>
+                    <span class="note">note</span>
+                </strong>
+                <strong>
+                    <span class="to">to</span>
+                </strong>
+                <strong>
+                    <span class="quiz">quiz</span>
+                </strong>
+            </div>
+            <button onclick="mode()" class="btn" id="mode-btn">
+                <strong>
+                    Dark mode
+                </strong>
+            </button>
+            <div class="flex ">
+                <button class="btn"> 
+                    <a href="signup.html" class="btn_1">
+                        Signup
+                    </a>
+                </button>
+                <button class="btn">
+                    <a href="login.html" class="btn_1">
+                        login
+                    </a>
+                </button>
+            </div>
+            <div class="menu">
+                <div class="icon" onclick="menu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+                <div id="myLinks">
+                     <a href="homepage.html">homepage</a>
+                    <a href="quiz_page.html">Quiz</a>
+                    <a href="synopsis.html">Synopsis</a>
+                    <a href="QA.html">QA</a>
+                </div>
+            </div>
+        </div>
+        <div class="header flex row">
+            <div class="acc_pic_wrapper flex row">
+                <div class="flex column">
+                    <img class="acc_pic" width="100" height="100" onclick="reveal()">
+                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file" class="hidden">
+                </div>
+                <p class="acc_name"></p>
+            </div>
+        </div>
+        <div id="tests-list" class="tests-container"> </div>
+    </div>
+</body>
+</html>

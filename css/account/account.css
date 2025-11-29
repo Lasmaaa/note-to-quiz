@@ -1,0 +1,28 @@
+:root {
+    --accent-color: #8672FF;
+    --buttons-hover: #4430b3;
+    --buttons: #9b8fe3;
+    --text-color: #27243a;
+    --base-color: rgb(112, 110, 110);
+    --white: #cdcdcd;
+}
+.header{
+    background-color: var(--white);
+    border-radius: 1rem;
+    height: auto;
+    margin: 2rem;
+
+}
+.acc_pic{
+    margin: 1rem;
+    border-radius: 50%;
+}
+.acc_name{
+    margin: 2.5rem .5rem;
+    font-size: large;
+    font-weight: 700;
+    color: var(--text-color);
+}
+.hidden{
+    display: none;
+}

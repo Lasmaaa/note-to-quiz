@@ -1,0 +1,15 @@
+@media (max-width: 850px) {
+    .flex.row {
+        flex-wrap: wrap;          
+    }
+
+    .fact-box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    .virsraksts {
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    background: var(--base-color);
+    color: var(--text-color);
+}
+:root {
+    --buttons-hover: #4430b3;
+    --buttons: #9b8fe3;
+    --text-color: #27243a;
+    --base-color: rgb(112, 110, 110);
+    --white: #cdcdcd;
+}
+.container {
+    padding: 20px;
+}
+.flex { display: flex; }
+.space-between { justify-content: space-between; }
+.column { flex-direction: column; }
+.row { flex-direction: row; }
+.navigation {
+    width: 95%;
+    padding: 1.5rem 2rem;
+    margin: 2rem auto;
+    background: var(--white);
+    border-radius: 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    box-shadow: 0 8px 20px rgba(157, 78, 221, 0.2);
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: var(--text-color);
+}
+.logo span {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: .9rem;
+    letter-spacing: 1px;
+}
+.to { margin-left: 2rem; }
+.quiz { margin-left: 3rem; }
+.btn {
+    padding: 10px 20px;
+    background-color: var(--buttons);
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+a.btn_1{
+    color: var(--white);
+}
+.btn:hover {
+    background-color: var(--buttons-hover);
+    color: var(--white);
+}
+.navigation button {
+    color: var(--white);
+    background: var(--buttons);
+    border: none;
+    padding: 8px 8px;
+    border-radius: 1rem;
+    margin-left: 10px;
+    transition: .3s;
+}
+.navigation button:hover {
+    background: var(--buttons-hover);
+}
+
+.navigation button a {
+    color: var(--text-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+.menu {
+    position: relative;
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 1rem;
+}
+.icon {
+    cursor: pointer;
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 4px 0;
+    transition: .3s;
+}
+#myLinks {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background: var(--white);
+    padding: 10px;
+    border-radius: .7rem;
+    box-shadow: 0 8px 20px rgba(157, 78, 221, 0.2);
+}
+#myLinks a {
+    display: block;
+    padding: 10px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+}
+#myLinks a:hover {
+    background: var(--buttons);
+    color: var(--white);
+}

@@ -1,0 +1,92 @@
+.flex{
+    display: flex;
+}
+.column{
+    flex-direction: column;
+}
+.row{
+    flex-direction: row;
+}
+.virsraksts{
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 10rem;
+    text-align: center;
+}
+.fact-box{
+    width: 50%;
+    background-color: #43437b;
+    border-radius: 1rem;
+}
+.margin{
+    margin: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.padding{
+    padding: 1rem;
+}
+.margin-top{
+    margin-top: 5rem;
+}
+
+
+
+
+
+
+
+.all {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 4rem; /* 4rem atstarpe no ekrāna malām */
+    box-sizing: border-box;
+}
+
+.all .flex.column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: calc(100% - 8rem); /* nodrošina 4rem no katras malas */
+}
+
+.flex.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* ļauj ietilpināt vairākas kartes rindā */
+    gap: 1rem;
+    max-width: calc(100% - 2rem); /* 4rem no kreisās un labās malas */
+    margin: 0 auto;
+}
+
+/* Kartes / lauciņi */
+.fact-box, .card {
+   flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 350px; /* vienāda maksimālā platuma kartei */
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: left;
+    padding: 4rem; /* iekšējā atstarpe */
+    box-sizing: border-box;
+}
+
+/* Teksts kartēs */
+.question strong {
+    font-size: 1.1rem;
+}
+
+.Answer {
+    margin-top: .5rem;
+}
+
+.Answer ul {
+    margin-left: 1rem;
+}
+
+
+

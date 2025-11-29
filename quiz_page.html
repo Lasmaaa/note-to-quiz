@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css//quiz_page/dark_mode.css">
+    <link rel="stylesheet" href="css//quiz_page/@media.css">
+    <link rel="stylesheet" href="css/quiz_page/quiz.css">
+
+    <script src="js/quiz_page/quiz.js" defer></script>
+
+    <script src="js//all/mode.js" defer></script>
+    <script src="js//all/menu.js" defer></script>
+
+</head>
+<body>
+   <div class="container">
+        <div class="flex flex_row space-between navigation">
+            <div class="logo">
+                <strong>
+                    <span class="note">note</span>
+                </strong>
+                <strong>
+                    <span class="to">to</span>
+                </strong>
+                <strong>
+                    <span class="quiz">quiz</span>
+                </strong>
+            </div>
+            <button onclick="mode()" class="btn" id="mode-btn">
+                <strong>
+                    Dark mode
+                </strong>
+            </button>
+            <div class="menu">
+                <div class="icon" onclick="menu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+                <div id="myLinks">
+                    <a href="homepage.html">Homepage</a>
+                    <a href="synopsis.html">Synopsis</a>
+                    <a href="QA.html">QA</a>
+                    <a href="account.html">Account</a>
+                </div>
+            </div>
+        </div>
+            <div id="quiz-container"></div>
+            <div id="result"></div>
+   </div>
+</body>
+</html>
