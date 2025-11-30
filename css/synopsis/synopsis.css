@@ -53,3 +53,10 @@
     margin-top: 2rem;
     padding-right: 8rem;
 }
+.quiz_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+}
