@@ -4,20 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homepage</title>
-    
     <link rel="stylesheet" href="css/main.css">
-
     <link rel="stylesheet" href="css/homepage/upload.css">
     <link rel="stylesheet" href="css/homepage/dark_mode.css">
-    <link rel="stylesheet" href="css/homepage/@media.css">
-
+    <link rel="stylesheet" href="css/@media.css">
+    
     <script src="js/homepage/img_upload.js" defer></script>
     <script src="js/homepage/hide_buttons.js" defer></script>
     <script src="js/homepage/ai_system.js" defer></script>
-
     <script src="js//all/mode.js" defer></script>
     <script src="js//all/menu.js" defer></script>
-
 </head>
 <body>
     <div class="container">
@@ -36,50 +32,35 @@
             <button onclick="mode()" class="btn" id="mode-btn">
                     Dark mode
             </button>
-            <div class="flex ">
-                <button class="btn"> 
-                    <a href="signup.html" class="btn_1">
-                        Signup
-                    </a>
-                </button>
-                <button class="btn">
-                    <a href="login.html" class="btn_1">
-                        login
-                    </a>
-                </button>
-            </div>
             <div class="menu">
                 <div class="icon" onclick="menu()">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
                 </div>
-
                 <div id="myLinks">
                     <a href="quiz_page.html">Quiz</a>
                     <a href="synopsis.html">Synopsis</a>
                     <a href="QA.html">QA</a>
-                    <a href="account.html">Account</a>
                 </div>
             </div>
         </div>
         <div class="card" id="card">
-    <div onclick="hidden_buttons()">
-        <img id="preview"> 
-        <label for="input-file" class="btn"> 
-            upload image
-        </label>
-        <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
-        <button type="button" id="quiz" class="hidden btn">
-            Start the quiz!
-        </button>
-        <button type="button" class="hidden btn" id="analyzeBtn">
-            Show Synopsis!
-        </button>
-        <div id="demo"></div>
+            <div onclick="hidden_buttons()">
+                <img id="preview"> 
+                <label for="input-file" class="btn"> 
+                    upload image
+                </label>
+                <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+                <button type="button" id="quiz" class="hidden btn">
+                    Start the quiz!
+                </button>
+                <button type="button" class="hidden btn" id="analyzeBtn">
+                    Show Synopsis!
+                </button>
+                <div id="demo"></div>
+            </div>
+        </div>
     </div>
-</div>
-    </div>
-
 </body>
 </html>
