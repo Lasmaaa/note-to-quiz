@@ -1,82 +1,77 @@
-// Saglabā testu vēsturē (visi iepriekšējie testi)
 function saveTest(lines) {
-    const allTests = JSON.parse(localStorage.getItem("allTests") || "[]");
+  const allTests = JSON.parse(localStorage.getItem("allTests") || "[]");
 
-    const newTest = {
-        id: Date.now(),                // unikāls ID
-        date: new Date().toLocaleString(), 
-        lines: lines                   // teksts no attēla
-    };
+  const newTest = {
+    id: Date.now(),                 
+    date: new Date().toLocaleString(),
+    lines: lines           
+  };
 
-    allTests.push(newTest);
-    localStorage.setItem("allTests", JSON.stringify(allTests));
+  allTests.push(newTest);
+
+  localStorage.setItem("allTests", JSON.stringify(allTests));
 }
 
-// Kad lapa ielādējas
-document.addEventListener('DOMContentLoaded', () => {
-    const analyzeBtn = document.getElementById("analyzeBtn");
-    const inputFile = document.getElementById("input-file");
-    const output = document.getElementById("demo");
+document.addEventListener("DOMContentLoaded", () => {
+  const analyzeBtn = document.getElementById("analyzeBtn");
+  const inputFile = document.getElementById("input-file");
+  const output = document.getElementById("demo");
 
-    // Pogas "Analizēt" klikšķis
-    analyzeBtn.addEventListener("click", async () => {
-        if (!inputFile.files.length) {
-            output.textContent = "Lūdzu, izvēlieties attēlu!";
-            return;
-        }
+  analyzeBtn.addEventListener("click", async () => {
 
-        const file = inputFile.files[0];
-        output.textContent = "Analizē attēlu…";
+    if (!inputFile.files.length) {
+      output.textContent = "Lūdzu, izvēlieties attēlu!";
+      return;
+    }
 
-        const formData = new FormData();
-        formData.append("file", file);
-        formData.append("apikey", "helloworld"); 
-        formData.append("language", "eng");
-        formData.append("isOverlayRequired", "false");
+    const file = inputFile.files[0];
 
-        try {
-            const response = await fetch("https://api.ocr.space/parse/image", {
-                method: "POST",
-                body: formData
-            });
+    output.textContent = "Analizē attēlu…";
 
-            const data = await response.json();
+    const formData = new FormData();
+    formData.append("file", file);            
+    formData.append("apikey", "K82568863088957"); 
+    formData.append("language", "eng");           
+    formData.append("isOverlayRequired", "false");
 
-            if (!data.ParsedResults || !data.ParsedResults.length) {
-                output.textContent = "Neizdevās nolasīt informāciju no attēla.";
-                return;
-            }
+    try {
+      const response = await fetch("https://api.ocr.space/parse/image", {
+        method: "POST",
+        body: formData
+      });
 
-            const text = data.ParsedResults[0].ParsedText.trim();
+      const data = await response.json();
 
-            // Sadala pa rindām
-            let lines = text
-                .split(/\r?\n/)
-                .map(line => line.trim())
-                .filter(line => line.length > 3);
+      if (!data.ParsedResults || !data.ParsedResults.length) {
+        output.textContent = "Neizdevās nolasīt informāciju no attēla.";
+        return;
+      }
 
-            if (!lines.length) {
-                output.textContent = "Nav nolasāmas informācijas.";
-                return;
-            }
+      const text = data.ParsedResults[0].ParsedText.trim();
 
-            // Saglabā testu vēsturē
-            saveTest(lines);
+      let lines = text
+        .split(/\r?\n/)           
+        .map(line => line.trim())    
+        .filter(line => line.length > 3); 
 
-            // Saglabā pašreizējo testu tālākai apstrādei
-            localStorage.setItem("quizQuestions", JSON.stringify(lines));
+      if (!lines.length) {
+        output.textContent = "Nav nolasāmas informācijas.";
+        return;
+      }
 
-            // Pāriet uz nākamo lapu
-            window.location.href = "synopsis.html";
+      saveTest(lines);
 
-        } catch (err) {
-            output.textContent = "Kļūda analizējot attēlu.";
-            console.error(err);
-        }
-    });
+      localStorage.setItem("quizQuestions", JSON.stringify(lines));
+
+      window.location.href = "synopsis.html";
+
+    } catch (err) {
+      output.textContent = "Kļūda analizējot attēlu.";
+      console.error(err);
+    }
+  });
 });
 
-// Poga, kas ved uz testa izpildi
 document.getElementById("quiz").addEventListener("click", () => {
-    window.location.href = "quiz_page.html";
+  window.location.href = "quiz_page.html";
 });

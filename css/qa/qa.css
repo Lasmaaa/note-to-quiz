@@ -30,63 +30,45 @@
 .margin-top{
     margin-top: 5rem;
 }
-
-
-
-
-
-
-
 .all {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 4rem; /* 4rem atstarpe no ekrāna malām */
+    padding: 4rem; 
     box-sizing: border-box;
 }
-
 .all .flex.column {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     width: 100%;
-    max-width: calc(100% - 8rem); /* nodrošina 4rem no katras malas */
+    max-width: calc(100% - 8rem); 
 }
-
 .flex.row {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /* ļauj ietilpināt vairākas kartes rindā */
+    flex-wrap: wrap; 
     gap: 1rem;
-    max-width: calc(100% - 2rem); /* 4rem no kreisās un labās malas */
+    max-width: calc(100% - 2rem); 
     margin: 0 auto;
 }
-
-/* Kartes / lauciņi */
 .fact-box, .card {
-   flex: 1 1 300px;
-    min-width: 300px;
-    max-width: 350px; /* vienāda maksimālā platuma kartei */
+   flex: 1 1 18rem;
+    min-width: 18rem;
+    max-width: 21rem;
     background: var(--white);
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     text-align: left;
-    padding: 4rem; /* iekšējā atstarpe */
+    padding: 4rem; 
     box-sizing: border-box;
 }
-
-/* Teksts kartēs */
 .question strong {
     font-size: 1.1rem;
 }
-
 .Answer {
     margin-top: .5rem;
 }
-
 .Answer ul {
     margin-left: 1rem;
 }
-
-
-

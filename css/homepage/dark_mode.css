@@ -5,23 +5,19 @@
     --dark-buttons: #444;
     --dark-buttons-hover: #1e1e1e; 
 }
-
 body.dark-mode {
     background: var(--dark-base-2);
     color: var(--dark-text);
 }
-
 body.dark-mode .navigation {
     background-color: var(--dark-base);
 }
 body.dark-mode .logo{
     color: var(--dark-text);
 }
-
 body.dark-mode .note{
     color: var(--dark-text);
 }
-
 body.dark-mode .menu,
 body.dark-mode .menu #myLinks {
     background-color: var(--dark-base);
@@ -43,26 +39,17 @@ body.dark-mode #myLinks a:hover{
 body.dark-mode .bar {
     background-color: var(--dark-text);
 }
-
 body.dark-mode .btn {
     background-color: var(--dark-buttons);
-    color: var(--dark-text);
+    color: var(--dark-text) !important;
     border-color: var(--dark-buttons);
 }
-body.dark-mode .btn_1 {
-    background-color: var(--dark-buttons);
-    color: var(--dark-text);
-    border-color: var(--dark-buttons);
-}
-
 body.dark-mode .card{
     background-color: var(--dark-base);
 }
-
 body.dark-mode label{
     background-color: var(--dark-text);
 }
-
 body.dark-mode #demo{
     color: var(--dark-text);
 }

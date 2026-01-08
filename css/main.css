@@ -54,7 +54,7 @@ body {
     border: none;
     border-radius: 1rem;
     cursor: pointer;
-    color: var(--text-color);
+    color: var(--text-color) !important;
     font-size: 15px;
     font-weight: 500;
     transition: 0.3s;
@@ -64,7 +64,7 @@ a.btn_1{
 }
 .btn:hover {
     background-color: var(--buttons-hover);
-    color: var(--white);
+    color: var(--white) !important;
 }
 .navigation button {
     color: var(--white);
@@ -78,7 +78,6 @@ a.btn_1{
 .navigation button:hover {
     background: var(--buttons-hover);
 }
-
 .navigation button a {
     color: var(--text-color);
     font-weight: 600;
@@ -108,7 +107,6 @@ a.btn_1{
     background: var(--white);
     padding: 10px;
     border-radius: .7rem;
-    box-shadow: 0 8px 20px rgba(157, 78, 221, 0.2);
 }
 #myLinks a {
     display: block;
@@ -119,5 +117,4 @@ a.btn_1{
 }
 #myLinks a:hover {
     background: var(--buttons);
-    color: var(--white);
 }

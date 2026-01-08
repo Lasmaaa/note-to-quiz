@@ -1,0 +1,108 @@
+/*ALL*/
+@media (max-width: 1024px) {
+    .navigation {
+        justify-content: center;
+        gap: 1.2rem;
+        text-align: center;
+    }
+    .logo {
+        margin-left: 0;
+    }
+    .btn {
+        width: 30%;
+    }
+    .menu a {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+@media (max-width: 500px) {
+    .navigation {
+        justify-content: center;
+        gap: 1.2rem;
+        text-align: center;
+    }
+    .logo {
+        margin-left: 0;
+    }
+    .btn {
+        width: 30%;
+    }
+    .menu a {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+/*HP*/
+@media (max-width: 1024px) {
+    .card {
+        width: 90%;
+    }
+}
+@media (max-width: 500px) {
+    .card {
+        width: 90%;
+    }
+}
+/*QA*/
+@media (max-width: 1024px) {
+    .flex.row {
+        flex-wrap: wrap;          
+    }
+    .fact-box {
+        width: 90%;
+    }
+    .virsraksts {
+        font-size: 2.2rem;
+        display: flex;
+    }
+}
+@media (max-width: 500px) {
+    .flex.row {
+        flex-wrap: wrap;          
+    }
+    .fact-box {
+        width: 90%;
+    }
+    .virsraksts {
+        font-size: 1.6rem;
+    }
+}
+/*QP*/
+@media (max-width: 1024px) {
+    #quiz-container {
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .btn {
+        text-align: center;
+    }
+}
+/*SYNOPSIS*/
+@media (max-width: 480px) {
+    .btn {
+        width: 30%;
+        font-size: 14px;
+    }
+    .btn {
+        width: 80%;
+    }
+    .navigation {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .fact-box {
+        font-size: 14px;
+        padding: 15px;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .fact-box button {
+        width: 22px;
+        height: 22px;
+    }
+}
